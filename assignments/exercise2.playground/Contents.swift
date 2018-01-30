@@ -5,26 +5,6 @@
  */
 
 import UIKit
-/*
- func run(weather: Int, schedule: Int, likeRunning : Int) -> String {
- 
- if likeRunning >= 4 {
- if schedule > 2 {
- return "Not going for a Run"
- } else {
- if weather > 45 && weather < 90 {
- return "Going for a Run"
- } else {
- return "Not Going for a Run"
- }
- }
- } else {
- return "Not going for a Run"
- }
- }
- 
- print(run(weather:22, schedule:3, likeRunning:9))
- */
 
 var weather = 50
 var schedule = 1

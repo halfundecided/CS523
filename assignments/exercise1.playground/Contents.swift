@@ -6,34 +6,52 @@
 
 import UIKit
 
-let loan : Int = 1000
-var balance : Double
+var balance : Double = 1000.0
+var monthlyBalance : Double = 1000.0
+var monthlyPaid : Double = 0.0
+var totalInterest : Double = 0.0
+var interest : Double = 0.0
+var finalPayment = 0.0
+var months : Int = 0
 
-// Calculate interest
-func interest(balance : Double) -> Double {
-    var interest : Double
+while balance > 0 {
     if balance > 500 {
-        interest = balance * (2/100)
-        return interest
+        interest = balance * 0.02
     } else {
-        interest = balance * (1/100)
-        return interest
+        interest = balance * 0.01
     }
-}
-print(interest(balance: Double(loan)))
-
-/*
-// Calculate monthly payment without interest
-func monthlyPay(interest : Double) -> Double {
-    var monthlyPay : Double
-    monthlyPay = 100 + interest(balance)
+    monthlyPaid = 100 - interest
+    monthlyBalance = monthlyBalance - monthlyPaid
+    balance = balance - 100
+    months += 1
+    print("Month \(months):")
+    print("The interest of this month: $\(interest)")
+    print("You need to pay $\(monthlyBalance) more for the loan.")
+    print("------------------------------------------------")
     
+    totalInterest = totalInterest + interest;
 }
 
-while balance <= 100 {
-    
+print("Month \(months+1):")
+print("You paid $\(monthlyBalance) as the last payment.")
+print("------------------------------------------------")
+
+finalPayment = 1000 + totalInterest
+
+print("Your total interest is $\(totalInterest)")
+print("The final payment is $\(finalPayment)")
+
+months = 0
+
+while finalPayment > 0 {
+    finalPayment = finalPayment - 100
+    months += 1
 }
-*/
+
+print("Number of months: \(months) months")
+
+
+
 
 
 
