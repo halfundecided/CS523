@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Calculator
 //
-//  Created by Mijeong Ban on 1/30/18.
+//  Created by Mijeong Ban on 1/31/18.
 //  Copyright © 2018 Mijeong Ban. All rights reserved.
 //
 
